@@ -1,6 +1,6 @@
 # OpenSong
 
-OpenSong is an opensource alternative PWA (progressive web app), which allows importing SongSelect®/CCLI® song sheets and has a builtin patcher for transposing. It is supposed to be a church-specific, lightweight, free and cross platform alternative to the iPad-only, paid OnSong® software.
+OpenSong is an opensource alternative PWA (progressive web app), which allows importing SongSelect®/CCLI®[^1] song sheets and has a builtin patcher for transposing. It is supposed to be a church-specific, lightweight, free and cross platform alternative to the iPad-only, paid OnSong®[^2] software.
 
 ----
 
@@ -16,8 +16,8 @@ Make sure to [install bun](https://bun.sh/) first!
 
 This software is licensed under [the MIT License](LICENSE).
 
-SongSelect® and CCLI® are registered trademarks of Christian Copyright Licensing International.
+[^1]: SongSelect® and CCLI® are registered trademarks of Christian Copyright Licensing International.
 
-OnSong® is a registered trademark of OnSong LLC in the United States and/or other countries.
+[^2]: OnSong® is a registered trademark of OnSong LLC in the United States and/or other countries.
 
-&copy 2025 - Lucas Birkert - All rights reserved
+&copy; 2025 - Lucas Birkert - All rights reserved
