@@ -31,6 +31,7 @@
 <style>
     main {
         flex: 1;
+		overflow-y: scroll;
     }
 
 	header {

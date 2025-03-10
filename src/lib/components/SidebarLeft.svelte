@@ -2,7 +2,8 @@
 	import { openSongState } from '$lib/state.svelte.js';
 	import ImportSheet from './ImportSheet.svelte';
 	import Setlists from './setlist/Setlists.svelte';
-	import Songs from './Songs.svelte';
+	import SongLibrary from './song/SongLibrary.svelte';
+	import SongView from './song/SongView.svelte';
 
 	let { show = $bindable() }: { show: boolean } = $props();
 </script>
@@ -10,8 +11,10 @@
 <div class="sidebar-left" class:show>
 	{#if openSongState.importFiles.length > 0}
 		<ImportSheet />
+	{:else if openSongState.library}
+		<SongLibrary />
 	{:else if openSongState.setlist !== undefined}
-		<Songs />
+		<SongView />
 	{:else}
 		<Setlists />
 	{/if}
@@ -32,7 +35,7 @@
 		top: 40px;
 		left: 0;
 		width: 100vw;
-		height: calc(100vh - 40px);
+		height: calc(100dvh - 40px);
 		z-index: 50;
 		background-color: rgba(0, 0, 0, 0.2);
 		opacity: 0;
@@ -58,7 +61,7 @@
 		transition: left 0.3s ease;
 		display: flex;
 		flex-direction: column;
-		height: calc(100vh - 40px);
+		height: calc(100dvh - 40px);
 		max-width: 300px;
 		width: 100%;
 		background-color: var(--color-bg);

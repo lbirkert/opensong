@@ -6,8 +6,11 @@ class OpenSongState {
     // current import preview
     importPreview: string | undefined = $state();
 
-    // current setlist
+    // opened setlist
     setlist: Setlist | undefined = $state();
+
+    // whether library is opened
+    library: boolean = $state(false);
 }
 
 export const openSongState = new OpenSongState();

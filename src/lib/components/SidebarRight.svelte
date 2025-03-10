@@ -13,7 +13,7 @@
         transition: right 0.3s ease;
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 40px);
+        height: calc(100dvh - 40px);
         max-width: 400px;
         width: 100%;
         background-color: var(--color-bg);

@@ -10,9 +10,7 @@
 	import deepcopy from 'deepcopy';
 	import Sidebar from './Sidebar.svelte';
 
-	const [source, sourceMeta] = analyzeSheet(openSongState.importFiles[0]);
-
-	const meta = $state({ ...sourceMeta });
+	const [source, meta] = $derived(analyzeSheet(openSongState.importFiles[0]));
 
 	let timeoutId: number | undefined;
 
@@ -48,10 +46,15 @@
 
 	async function addToLibrary() {
 		await addSong();
+		openSongState.importFiles.shift();
 	}
 
 	async function addToSetlist() {
 		const songId = await addSong();
+		openSongState.setlist!.songs.push(songId);
+		const setlist = deepcopy(openSongState.setlist!);
+		await (await db.get()).put('setlist', setlist);
+		openSongState.importFiles.shift();
 	}
 </script>
 

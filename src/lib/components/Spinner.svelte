@@ -2,10 +2,11 @@
 	import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 	import { Icon } from "svelte-awesome";
 
+    let { scale = 2 } = $props();
 </script>
 
 <div class="spinner">
-    <Icon data={faSpinner} scale={2} />
+    <Icon data={faSpinner} {scale} />
 </div>
 
 <style>

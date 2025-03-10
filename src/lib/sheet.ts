@@ -477,6 +477,7 @@ export function patch(source: Source, meta: SongMeta): Uint8Array {
         page.destroy();
     }
 
+    doc.bake();
     const result = doc.saveToBuffer().asUint8Array();
     doc.destroy();
     return result;

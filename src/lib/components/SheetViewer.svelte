@@ -8,7 +8,7 @@
 
 <style>
     .sheet {
-        height: calc(100vh - 40px);
+        height: calc(100dvh - 40px);
         width: 100vw;
     }
 </style>

@@ -2,7 +2,6 @@
 	import { db } from '$lib/db.js';
 	import type { Setlist } from '$lib/types.js';
 	import Sidebar from '../Sidebar.svelte';
-	import SortableList from '../SortableList.svelte';
 
 	let { onback } = $props();
 
@@ -21,10 +20,11 @@
 			updatedAt: date.getTime(),
 		};
 
-		const setlistId = await (await db.get()).add('setlist', setlist);
-
+		setlist.id = await (await db.get()).add('setlist', setlist);
+		
 		onback();
-		// TODO
+
+		// TODO: enter setlist
 	}
 </script>
 

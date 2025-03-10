@@ -42,7 +42,10 @@
 	});
 
 	let show = $state(false);
-	onMount(() => show = true);
+	onMount(async () => {
+		await document.fonts.ready;
+		show = true;
+	});
 </script>
 
 <Theme/>
@@ -105,7 +108,7 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 100dvh;
 		background-color: white;
 		z-index: 1000;
 		display: flex;

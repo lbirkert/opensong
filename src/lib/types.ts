@@ -54,12 +54,14 @@ export interface ChordPatch {
 }
 
 export interface Song {
+    id?: number;
     sourceId: number;
     meta: SongMeta;
     //  notes: Note[];
 }
 
 export interface Setlist {
+    id?: number;
     title: string;
     description: string;
     author: String;
